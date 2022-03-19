@@ -1,5 +1,7 @@
 // The scope of `random` is too loose 
 
+// in the end of project, as we have two athlets we had to remove  const random = Math.floor(Math.random() * 3); into getRndEvent() function
+
 const getRandEvent = () => {
   const random = Math.floor(Math.random() * 3);
 
@@ -14,7 +16,7 @@ const getRandEvent = () => {
 
 // The scope of `days` is too tight 
 const getTrainingDays = event => {
-  // varijavla koja daje dane u ovoj funkciji
+  // first we had days variable outside the function
   let days;
   if (event === 'Marathon') {
     days = 50;
@@ -26,18 +28,18 @@ const getTrainingDays = event => {
 
 
   return days;
-  // vrati dane
 };
 
 // The scope of `name` is too tight 
 const name = 'Nala';
-
+// for us to be able to call name and event, we had to add add name as the first parameter for each function and move name to variable to global scope. 
 const logEvent = (name, event) => {
   console.log(`${name}'s event is: ${event}`);
 };
 const logTime = (name, days) => {
   console.log(`${name}'s time to train is: ${days} days`);
 };
+
 
 const event = getRandEvent();
 const days = getTrainingDays(event);
@@ -46,6 +48,8 @@ const days = getTrainingDays(event);
 logEvent(name, event);
 logTime(name, days);
 
+
+// we added second athlete for us to see the structure of functions and possible errors - in the end of project, as we have two athlets we had to remove  const random = Math.floor(Math.random() * 3); into getRndEvent() function
 const event2 = getRandEvent();
 const days2 = getTrainingDays(event2);
 const name2 = 'Warren';
