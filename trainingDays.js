@@ -16,7 +16,7 @@ const getRandEvent = () => {
 
 // The scope of `days` is too tight 
 const getTrainingDays = event => {
-  // first we had days variable outside the function
+  // first we didn't have days variable; we had to call variable in this function;
   let days;
   if (event === 'Marathon') {
     days = 50;
