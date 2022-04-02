@@ -91,5 +91,4 @@ logEvent(name2, event2);
 logTime(name2, days2);
 logHours(name2,time2);
 finalSent(name2,days2,time2);
-// When we call finalSet (for Alex), we can see that days and time aren't matching event. Something I am working on.
 
